@@ -1,11 +1,7 @@
 const express = require('express')
 const routes = express.Router()
 
-let db = [
-    {'1': { first_name: 'Paulo', last_name: 'Sérgio', email: 'paulo.sergio@gmail.com'}},
-    {'2': { first_name: 'Luiz', last_name: 'Henrique', email: 'luiz.henrique@gmail.com'}},
-    {'3': { first_name: 'Diego', last_name: 'Mandu', email: 'diego.mandu@gmail.com'}}
-]
+const db = require("./src/db.json")
 
 // Buscar dados
 routes.get('/', (req, res) => {
